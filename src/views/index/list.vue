@@ -31,6 +31,7 @@ import covArticles from './articles.vue'
 import { setAticles, setDatePointer } from '../../vuex/index/action'
 
 export default {
+    // name: '11',
     vuex: {
         getters: {
             datePointer: state => state.datePointer,

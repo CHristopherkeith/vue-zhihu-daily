@@ -19,6 +19,7 @@ app.use(express.static(__dirname + '/public'));
 // APIS
 app.get('/imagebox', imagebox.upload)
 app.get('/readapi', api.requestApi)
+console.log(__dirname,'2222222222222222')
 app.get('*', (req, res) => {res.sendFile(__dirname + '/public/index.html')})
 
 

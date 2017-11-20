@@ -23,11 +23,14 @@ Vue.prototype.$preImg = (uri) => {
 }
 
 Vue.prototype.$covImg = (self, uri, callback) => {
+    console.log(IMG_MAP.get(uri), 'IMG_MAP.get(uri)')
     if (IMG_MAP.get(uri)) {
         return callback(IMG_MAP.get(uri))
     }
 
     let data = window.btoa(uri.split('').reverse().join(''))
+    console.log(data, 'data')
+    console.log(window.location.origin, 'window.location.origin')
     self.$http.get(window.location.origin + '/imagebox?type=rev-64&data=' + data)
         .then(response => {
             if (response.data.code === 200) {
