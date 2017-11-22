@@ -8,6 +8,7 @@ const router = new VueRouter({
 })
 
 router.map({
+    // ok
     '/': {
         name: 'index',
         component: (resolve) => {

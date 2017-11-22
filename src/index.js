@@ -29,8 +29,8 @@ Vue.prototype.$covImg = (self, uri, callback) => {
     }
 
     let data = window.btoa(uri.split('').reverse().join(''))
-    console.log(data, 'data')
-    console.log(window.location.origin, 'window.location.origin')
+    // console.log(data, 'data')
+    // console.log(window.location.origin, 'window.location.origin')
     self.$http.get(window.location.origin + '/imagebox?type=rev-64&data=' + data)
         .then(response => {
             if (response.data.code === 200) {
